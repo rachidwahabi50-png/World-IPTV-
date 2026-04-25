@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORLD IPTV - عالم الترفيه المميز بلا حدود</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a0a0f;
+            --secondary-dark: #12121a;
+            --accent-blue: #00d4ff;
+            --accent-cyan: #00ffc8;
+            --accent-green: #39ff14;
+            --gradient-1: linear-gradient(135deg, #00d4ff, #00ffc8);
+            --gradient-2: linear-gradient(135deg, #39ff14, #00ffc8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body { 
+            font-family: 'Cairo', 'Poppins', sans-serif;
+            background: var(--primary-dark);
+            color: #fff;
+            overflow-x: hidden; <div style="text-align:center; margin:30px 0;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/IBO_Player_logo.png"
+  width="180"
+  style="filter:drop-shadow(0 0 20px #00c2ff); animation: float 3s infinite;">
+</div>
+        }
+
+        body[dir="ltr"] {
+            font-family: 'Poppins', 'Cairo', sans-serif;
+        }
+
+        /* Animated Background */
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+            position: relative;
+            overflow: hidden;
+        }<div style="text-align:center; margin:30px 0;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/IBO_Player_logo.png"
+  width="180"
+  style="filter:drop-shadow(0 0 20px #00c2ff); animation: float 3s infinite;">
+</div>
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(57, 255, 20, 0.1) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Glowing Text */
+        .glow-text {
+            text-shadow: 0 0 10px var(--accent-cyan),
+                         0 0 20px var(--accent-cyan),
+                         0 0 40px var(--accent-cyan);
+        }
+
+        .glow-green {
+            text-shadow: 0 0 10px var(--accent-green),
+                         0 0 20px var(--accent-green),
+                         0 0 40px var(--accent-green);
+        }
+
+        /* Animated Banner */
+        .sliding-banner {
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan), var(--accent-green));
+            background-size: 200% 100%;
+            animation: gradientSlide 3s linear infinite;
+        }
+
+        @keyframes gradientSlide {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        .marquee {
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        [dir="ltr"] .marquee {
+            animation: marquee-ltr 20s linear infinite;
+        }
+
+        @keyframes marquee-ltr {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        } <div style="text-align:center;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/IBO_Player_logo.png"
+  width="180"
+  style="filter:drop-shadow(0 0 20px #00c2ff);">
+</div>
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes glow {
+            0% { filter: drop-shadow(0 0 10px var(--accent-cyan)); }
+            100% { filter: drop-shadow(0 0 30px var(--accent-green)); }
+        }
+
+        /* Pricing Cards */
+        .pricing-card {
+            background: linear-gradient(145deg, #1a1a2e, #12121a);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .pricing-card:hover::before {
+            left: 100%;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--accent-green);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-10px) scale(1.07);
+            box-shadow: 0 25px 50px rgba(57, 255, 20, 0.3);
+        }
+
+        /* Gradient Buttons */
+        .btn-gradient {
+            background: var(--gradient-1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-gradient:hover::before {
+            left: 100%;
+        }
+
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: bounce 2s infinite;
+        }
+
+        [dir="ltr"] .floating-whatsapp {
+            right: auto;
+            left: 30px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            background: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-5px);
+        }
+
+        /* Testimonial Cards */
+        .testimonial-card {
+            background: linear-gradient(145deg, #1a1a2e, #12121a);
+            border-left: 4px solid var(--accent-cyan);
+        }
+
+        [dir="ltr"] .testimonial-card {
+            border-left: none;
+            border-right: 4px solid var(--accent-cyan);
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent-cyan);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Promo Banner Animation */
+        .promo-banner {
+            background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+            background-size: 300% 100%;
+            animation: promoGradient 5s linear infinite;
+        }
+
+        @keyframes promoGradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Language Switch */
+        .lang-switch {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--accent-cyan);
+            transition: all 0.3s ease;
+        }
+
+        .lang-switch:hover {
+            background: rgba(0, 212, 255, 0.2);
+        }
+
+        .lang-btn.active {
+            background: var(--gradient-1);
+            color: #00c2ff;
+        }
+
+        /* Stars Rating */
+        .stars {
+            color: ##00c2ff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px) scale(1.02);
+            }
+        }
+
+        /* Particles Effect */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--accent-cyan);
+            border-radius: 50%;
+            animation: particleFloat 15s infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes particleFloat {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(57, 255, 20, 0.2), rgba(0, 212, 255, 0.2));
+            border: 2px solid var(--accent-green);
+            animation: highlightPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes highlightPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(57, 255, 20, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(57, 255, 20, 0.6); }
+        }
+    </style>
+</head>
+<body dir="rtl" id="body">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/212650899858" target="_blank" class="floating-whatsapp w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl btn-whatsapp">
+        <i class="fab fa-whatsapp text-3xl text-white"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-opacity-95 backdrop-blur-lg" style="background: rgba(10, 10, 15, 0.95);">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 to-green-400 flex items-center justify-center">
+                        <i class="fas fa-globe text-2xl text-black"></i>
+                    </div>
+                    <span class="text-2xl font-bold glow-text">WORLD IPTV</span>
+                </div>
+
+                <!-- Language Switch & WhatsApp -->
+                <div class="flex items-center gap-4">
+                    <div class="lang-switch rounded-full p-1 flex">
+                        <button onclick="switchLang('ar')" class="lang-btn px-4 py-2 rounded-full text-sm font-bold transition-all" id="btn-ar">AR</button>
+                        <button onclick="switchLang('fr')" class="lang-btn px-4 py-2 rounded-full text-sm font-bold transition-all" id="btn-fr">FR</button>
+                    </div>
+                    <a href="https://wa.me/212650899858" target="_blank" class="btn-whatsapp px-4 py-2 rounded-full flex items-center gap-2 text-white font-bold hover:scale-105 transition-all">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span class="hidden md:inline">+212650899858</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Animated Banner -->
+    <div class="sliding-banner mt-20 py-3 overflow-hidden">
+        <div class="marquee whitespace-nowrap text-black font-bold text-lg">
+            <span class="banner-text">🔥 عرض خاص: تفعيل IBO Player سنة مجانا + 🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔥 عرض خاص: تفعيل IBO Player سنة مجانا + IPTV بدون تقطيع 🔥</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center relative pt-20">
+        <!-- Particles -->
+        <div class="particles" id="particles"></div>
+
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Content -->
+                <div class="text-center lg:text-right fade-in">
+                    <h1 class="hero-title text-4xl md:text-6xl font-black mb-6 leading-tight">
+                        <span class="text-white">أفضل خدمة</span>
+                        <br>
+                        <span class="glow-text">IPTV</span>
+                        <span class="glow-green"> في المغرب</span>
+                    </h1>
+                    <p class="hero-subtitle text-xl md:text-2xl text-gray-300 mb-8">
+                        <span class="slogan">عالم الترفيه المميز بلا حدود</span>
+                        <br>
+                        <span class="text-cyan-400">+10,000</span> قناة | أفلام | رياضة | <span class="text-green-400">4K</span>
+                    </p>
+
+                    <!-- Highlight Box -->
+<div class="bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-2xl mb-8 shadow-lg animate-pulse">
+    <span class="text-xl md:text-2xl font-bold text-white">
+        🎁 IBO Player مجاني لمدة سنة
+    </span>
+</div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/212650899858" class="btn-gradient px-8 py-4 rounded-full text-black font-bold text-xl flex items-center justify-center gap-3">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="cta-text">اطلب الآن</span>
+                        </a>
+                        <a href="#pricing" class="border-2 border-cyan-400 px-8 py-4 rounded-full font-bold text-xl hover:bg-cyan-400 hover:text-black transition-all">
+                            <span class="view-plans-text">شاهد العروض</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- IBO Player Logo -->
+                <div class="flex justify-center items-center">
+                    <div class="ibo-logo relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-purple-600 via-blue-500 to-cyan-400 flex items-center justify-center shadow-2xl">
+                            <div class="text-center">
+                                <div class="w-32 h-32 mx-auto mb-4 rounded-2xl bg-white/10 backdrop-blur flex items-center justify-center">
+                                    <i class="fas fa-play text-6xl text-white"></i>
+                                </div>
+                                <span class="text-3xl font-black text-white">IBO Player</span>
+                                <p class="text-white/80 mt-2">Premium IPTV</p>
+                            </div>
+                        </div>
+                        <!-- Glow Effect -->
+                        <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-cyan-400 to-green-400 blur-3xl opacity-30 -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gradient-to-b from-transparent to-black/50">
+        <div class="container mx-auto px-4">
+            <h2 class="features-title text-3xl md:text-4xl font-bold text-center mb-16 glow-text fade-in">لماذا تختارنا؟</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="feature-card p-6 rounded-2xl text-center fade-in">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+                        <i class="fas fa-bolt text-2xl text-black"></i>
+                    </div>
+                    <h3 class="feature-1-title font-bold text-lg mb-2">تفعيل فوري</h3>
+                    <p class="feature-1-desc text-gray-400 text-sm">تفعيل في دقائق</p>
+                </div>
+
+                <div class="feature-card p-6 rounded-2xl text-center fade-in">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-400 to-cyan-500 flex items-center justify-center">
+                        <i class="fas fa-4k text-2xl text-black"></i>
+                    </div>
+                    <h3 class="feature-2-title font-bold text-lg mb-2">جودة 4K / HD</h3>
+                    <p class="feature-2-desc text-gray-400 text-sm">أعلى جودة متاحة</p>
+                </div>
+
+                <div class="feature-card p-6 rounded-2xl text-center fade-in">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                        <i class="fas fa-signal text-2xl text-black"></i>
+                    </div>
+                    <h3 class="feature-3-title font-bold text-lg mb-2">بدون تقطيع</h3>
+                    <p class="feature-3-desc text-gray-400 text-sm">سيرفرات قوية</p>
+                </div>
+
+                <div class="feature-card p-6 rounded-2xl text-center fade-in">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+                        <i class="fas fa-headset text-2xl text-black"></i>
+                    </div>
+                    <h3 class="feature-4-title font-bold text-lg mb-2">دعم 24/7</h3>
+                    <p class="feature-4-desc text-gray-400 text-sm">متاحين دائماً</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="pricing-title text-3xl md:text-4xl font-bold text-center mb-4 glow-text fade-in">اختر عرضك</h2>
+            <p class="pricing-subtitle text-center text-gray-400 mb-16 fade-in">أسعار حسب نوع السرفر تبدأ من 150 درهم للعام</p>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- 12 Months -->
+                <div class="pricing-card rounded-3xl p-8 fade-in">
+                    <div class="text-center mb-8">
+                        <span class="plan-1-duration text-gray-400">3 أشهر</span>
+                        <div class="mt-4">
+                            <span class="text-5xl font-black text-cyan-400">70</span>
+                            <span class="text-xl text-gray-200">DH</span>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-1">+10,000 قناة</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-2">جودة HD & 4K</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-3">دعم فني 24/7</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-4">جميع الأجهزة</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://wa.me/212650899858?text=أريد%20اشتراك%203%20أشهر" class="btn-gradient w-full py-4 rounded-full text-black font-bold text-center block">
+                        <span class="order-now-text">اطلب الآن</span>
+                    </a>
+                </div>
+
+                <!-- 6 Months - Featured -->
+                <div class="pricing-card featured rounded-3xl p-8 fade-in relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="best-offer-badge bg-gradient-to-r from-green-400 to-cyan-400 text-black px-6 py-2 rounded-full font-bold text-sm">أفضل عرض</span>
+                    </div>
+
+                    <div class="text-center mb-8 mt-4">
+                        <span class="plan-2-duration text-gray-400">6 أشهر</span>
+                        <div class="mt-4">
+                            <span class="text-5xl font-black text-green-400">100</span>
+                            <span class="text-xl text-gray-400">DH</span>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-1">+10,000 قناة</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-2">جودة HD & 4K</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-3">دعم فني 24/7</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-4">جميع الأجهزة</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-gift text-yellow-400"></i>
+                            <span class="bonus-text text-yellow-400 font-bold">هدية خاصة</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://wa.me/212650899858?text=أريد%20اشتراك%206%20أشهر" class="bg-gradient-to-r from-green-400 to-cyan-400 w-full py-4 rounded-full text-black font-bold text-center block hover:scale-105 transition-all">
+                        <span class="order-now-text">اطلب الآن</span>
+                    </a>
+                </div>
+
+                <!-- 3 Months -->
+                <div class="pricing-card rounded-3xl p-8 fade-in relative overflow-visible">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="free-ibo-badge bg-gradient-to-r from-purple-400 to-pink-400 text-white px-4 py-2 rounded-full font-bold text-sm">IBO Player مجاني</span>
+                    </div>
+
+                    <div class="text-center mb-8 mt-4">
+                        <span class="plan-3-duration text-gray-400">12 شهر</span>
+                        <div class="mt-4">
+                            <span class="text-5xl font-black text-purple-400">200</span>
+                            <span class="text-xl text-gray-400">DH</span>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-1">+10,000 قناة</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-2">جودة HD & 4K</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-3">دعم فني 24/7</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span class="plan-feature-4">جميع الأجهزة</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-star text-purple-400"></i>
+                            <span class="ibo-free-text text-purple-400 font-bold">IBO Player سنة مجانا</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://wa.me/212650899858?text=أريد%20اشتراك%2012%20شهر%20مع%20IBO%20Player" class="bg-gradient-to-r from-purple-400 to-pink-400 w-full py-4 rounded-full text-white font-bold text-center block hover:scale-105 transition-all">
+                        <span class="order-now-text">اطلب الآن</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="py-6 promo-banner">
+        <div class="container mx-auto px-4">
+            <p class="promo-text text-center text-2xl font-bold text-white">💥 تخفيضات حصرية اليوم 💥</p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="testimonials-title text-3xl md:text-4xl font-bold text-center mb-16 glow-text fade-in">آراء عملائنا</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="testimonial-card p-6 rounded-2xl fade-in">
+                    <div class="stars mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-1-text text-gray-300 mb-4">"خدمة ممتازة وجودة عالية جداً! التفعيل كان سريع والدعم متجاوب دائماً."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+                            <span class="font-bold text-black">م</span>
+                        </div>
+                        <span class="testimonial-1-name font-bold">محمد - الدار البيضاء</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card p-6 rounded-2xl fade-in">
+                    <div class="stars mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-2-text text-gray-300 mb-4">"أفضل IPTV جربته! قنوات كثيرة وبدون أي تقطيع. أنصح به بشدة."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-cyan-500 flex items-center justify-center">
+                            <span class="font-bold text-black">أ</span>
+                        </div>
+                        <span class="testimonial-2-name font-bold">أحمد - الرباط</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card p-6 rounded-2xl fade-in">
+                    <div class="stars mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-3-text text-gray-300 mb-4">"السعر ممتاز والخدمة رائعة! IBO Player المجاني كان هدية رائعة."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                            <span class="font-bold text-black">ف</span>
+                        </div>
+                        <span class="testimonial-3-name font-bold">فاطمة - طنجة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gradient-to-b from-transparent to-black/30">
+        <div class="container mx-auto px-4">
+            <h2 class="faq-title text-3xl md:text-4xl font-bold text-center mb-16 glow-text fade-in">أسئلة شائعة</h2>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="faq-item rounded-2xl p-6 cursor-pointer fade-in" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="faq-1-title font-bold text-lg">ما هو IPTV؟</h3>
+                        <i class="fas fa-chevron-down faq-icon transition-transform text-cyan-400"></i>
+                    </div>
+                    <div class="faq-content mt-4 text-gray-400">
+                        <p class="faq-1-answer">IPTV هو خدمة بث تلفزيوني عبر الإنترنت تتيح لك مشاهدة آلاف القنوات والأفلام والمسلسلات بجودة عالية على أي جهاز متصل بالإنترنت.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item rounded-2xl p-6 cursor-pointer fade-in" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="faq-2-title font-bold text-lg">كيف يتم التثبيت؟</h3>
+                        <i class="fas fa-chevron-down faq-icon transition-transform text-cyan-400"></i>
+                    </div>
+                    <div class="faq-content mt-4 text-gray-400">
+                        <p class="faq-2-answer">التثبيت بسيط جداً! بعد الدفع، سنرسل لك بيانات التفعيل عبر الواتساب مع شرح مفصل. التفعيل يتم في دقائق معدودة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item rounded-2xl p-6 cursor-pointer fade-in" onclick="toggleFaq(this)">
+                    <div class="flex items-center justify-between">
+                        <h3 class="faq-3-title font-bold text-lg">ما هي الأجهزة المتوافقة؟</h3>
+                        <i class="fas fa-chevron-down faq-icon transition-transform text-cyan-400"></i>
+                    </div>
+                    <div class="faq-content mt-4 text-gray-400">
+                        <p class="faq-3-answer">الخدمة متوافقة مع جميع الأجهزة: Smart TV, Android Box, Smartphone, Tablet, PC, Mac, Fire Stick, وغيرها.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-2xl mx-auto fade-in">
+                <h2 class="final-cta-title text-3xl md:text-4xl font-bold mb-6 glow-text">ابدأ الآن!</h2>
+                <p class="final-cta-subtitle text-xl text-gray-400 mb-8">تواصل معنا عبر الواتساب للحصول على تفعيل فوري</p>
+                
+                <a href="https://wa.me/212650899858?text=مرحبا،%20أريد%20الاشتراك%20في%20IPTV" target="_blank" class="btn-whatsapp inline-flex items-center gap-4 px-12 py-6 rounded-full text-white font-bold text-2xl hover:scale-105 transition-all shadow-2xl">
+                    <i class="fab fa-whatsapp text-4xl"></i>
+                    <span class="instant-activation-text">تفعيل فوري</span>
+                </a>
+                
+                <p class="mt-6 text-gray-500">
+                    <i class="fas fa-phone-alt ml-2"></i>
+                    +212650899858
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-green-400 flex items-center justify-center">
+                    <i class="fas fa-globe text-xl text-black"></i>
+                </div>
+                <span class="text-xl font-bold">WORLD IPTV</span>
+            </div>
+            <p class="footer-slogan text-gray-400 mb-4">عالم الترفيه المميز بلا حدود</p>
+            <p class="text-gray-600 text-sm">© 2024 WORLD IPTV. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language content
+        const content = {
+            ar: {
+                dir: 'rtl',
+                heroTitle: '<span class="text-white">أفضل خدمة</span><br><span class="glow-text">IPTV</span><span class="glow-green"> في المغرب</span>',
+                slogan: 'عالم الترفيه المميز بلا حدود',
+                iboGift: '🎁 IBO Player مجاني لمدة سنة',
+                ctaText: 'اطلب الآن',
+                viewPlans: 'شاهد العروض',
+                bannerText: '🔥 عرض خاص: تفعيل IBO Player سنة مجانا + IPTV بدون تقطيع 🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔥 عرض خاص: تفعيل IBO Player سنة مجانا + IPTV بدون تقطيع 🔥',
+                featuresTitle: 'لماذا تختارنا؟',
+                feature1Title: 'تفعيل فوري',
+                feature1Desc: 'تفعيل في دقائق',
+                feature2Title: 'جودة 4K / HD',
+                feature2Desc: 'أعلى جودة متاحة',
+                feature3Title: 'بدون تقطيع',
+                feature3Desc: 'سيرفرات قوية',
+                feature4Title: 'دعم 24/7',
+                feature4Desc: 'متاحين دائماً',
+                pricingTitle: 'اختر عرضك',
+                pricingSubtitle: 'أسعار حسب نوعية السرفر تبدأ من 150 درهم',
+                plan1Duration: '3 أشهر',
+                plan2Duration: '6 أشهر',
+                plan3Duration: '12 شهر',
+                planFeature1: '+10,000 قناة',
+                planFeature2: 'جودة HD & 4K',
+                planFeature3: 'دعم فني 24/7',
+                planFeature4: 'جميع الأجهزة',
+                bonusText: 'هدية خاصة',
+                iboFreeText: 'IBO Player سنة مجانا',
+                orderNow: 'اطلب الآن',
+                bestOffer: 'أفضل عرض',
+                freeIbo: 'IBO Player مجاني',
+                promoText: '💥 تخفيضات حصرية اليوم 💥',
+                testimonialsTitle: 'آراء عملائنا',
+                testimonial1Text: '"خدمة ممتازة وجودة عالية جداً! التفعيل كان سريع والدعم متجاوب دائماً."',
+                testimonial1Name: 'محمد - الدار البيضاء',
+                testimonial2Text: '"أفضل IPTV جربته! قنوات كثيرة وبدون أي تقطيع. أنصح به بشدة."',
+                testimonial2Name: 'أحمد - الرباط',
+                testimonial3Text: '"السعر ممتاز والخدمة رائعة! IBO Player المجاني كان هدية رائعة."',
+                testimonial3Name: 'فاطمة - طنجة',
+                faqTitle: 'أسئلة شائعة',
+                faq1Title: 'ما هو IPTV؟',
+                faq1Answer: 'IPTV هو خدمة بث تلفزيوني عبر الإنترنت تتيح لك مشاهدة آلاف القنوات والأفلام والمسلسلات بجودة عالية على أي جهاز متصل بالإنترنت.',
+                faq2Title: 'كيف يتم التثبيت؟',
+                faq2Answer: 'التثبيت بسيط جداً! بعد الدفع، سنرسل لك بيانات التفعيل عبر الواتساب مع شرح مفصل. التفعيل يتم في دقائق معدودة.',
+                faq3Title: 'ما هي الأجهزة المتوافقة؟',
+                faq3Answer: 'الخدمة متوافقة مع جميع الأجهزة: Smart TV, Android Box, Smartphone, Tablet, PC, Mac, Fire Stick, وغيرها.',
+                finalCtaTitle: 'ابدأ الآن!',
+                finalCtaSubtitle: 'تواصل معنا عبر الواتساب للحصول على تفعيل فوري',
+                instantActivation: 'تفعيل فوري',
+                footerSlogan: 'عالم الترفيه المميز بلا حدود'
+            },
+            fr: {
+                dir: 'ltr',
+                heroTitle: '<span class="text-white">Le Meilleur Service</span><br><span class="glow-text">IPTV</span><span class="glow-green"> au Maroc</span>',
+                slogan: 'Le monde du divertissement premium sans limites',
+                iboGift: '🎁 IBO Player gratuit 1 an',
+                ctaText: 'Commander',
+                viewPlans: 'Voir les offres',
+                bannerText: '🔥 Offre spéciale: Activation IBO Player gratuite 1 an + IPTV sans coupure 🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔥 Offre spéciale: Activation IBO Player gratuite 1 an + IPTV sans coupure 🔥',
+                featuresTitle: 'Pourquoi nous choisir?',
+                feature1Title: 'Activation rapide',
+                feature1Desc: 'En quelques minutes',
+                feature2Title: 'Qualité 4K / HD',
+                feature2Desc: 'Meilleure qualité',
+                feature3Title: 'Sans coupure',
+                feature3Desc: 'Serveurs puissants',
+                feature4Title: 'Support 24/7',
+                feature4Desc: 'Toujours disponible',
+                pricingTitle: 'Choisissez votre offre',
+                pricingSubtitle: 'Prix à partir de 150 DH',
+                plan1Duration: '3 mois',
+                plan2Duration: '6 mois',
+                plan3Duration: '12 mois',
+                planFeature1: '+10,000 chaînes',
+                planFeature2: 'Qualité SD & HD & FHD & 4K',
+                planFeature3: 'Support 24/7',
+                planFeature4: 'Tous les appareils',
+                bonusText: 'Cadeau spécial',
+                iboFreeText: 'IBO Player gratuit 1 an',
+                orderNow: 'Commander',
+                bestOffer: 'Meilleure offre',
+                freeIbo: 'IBO Player gratuit',
+                promoText: '💥 Promotions exclusives aujourd\'hui 💥',
+                testimonialsTitle: 'Avis clients',
+                testimonial1Text: '"Service excellent et très haute qualité! L\'activation était rapide et le support toujours réactif."',
+                testimonial1Name: 'Mohamed - Casablanca',
+                testimonial2Text: '"Meilleur IPTV que j\'ai essayé! Beaucoup de chaînes sans aucune coupure. Je recommande vivement."',
+                testimonial2Name: 'Ahmed - Rabat',
+                testimonial3Text: '"Prix excellent et service génial! IBO Player gratuit était un super cadeau."',
+                testimonial3Name: 'Fatima - Tanger',
+                faqTitle: 'Questions fréquentes',
+                faq1Title: 'Qu\'est-ce que l\'IPTV?',
+                faq1Answer: 'L\'IPTV est un service de diffusion TV via Internet qui vous permet de regarder des milliers de chaînes, films et séries en haute qualité sur n\'importe quel appareil connecté.',
+                faq2Title: 'Comment installer?',
+                faq2Answer: 'L\'installation est très simple! Après le paiement, nous vous enverrons les données d\'activation via WhatsApp avec une explication détaillée. L\'activation se fait en quelques minutes.',
+                faq3Title: 'Appareils compatibles?',
+                faq3Answer: 'Le service est compatible avec tous les appareils: Smart TV, Android Box, Smartphone, Tablette, PC, Mac, Fire Stick, etc.',
+                finalCtaTitle: 'Commencez maintenant!',
+                finalCtaSubtitle: 'Contactez-nous sur WhatsApp pour une activation immédiate',
+                instantActivation: 'Activation immédiate',
+                footerSlogan: 'Le monde du divertissement premium sans limites'
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            const data = content[lang];
+            const body = document.getElementById('body');
+            
+            // Update direction
+            body.dir = data.dir;
+            document.documentElement.lang = lang;
+
+            // Update active button
+            document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+
+            // Update content
+            document.querySelector('.hero-title').innerHTML = data.heroTitle;
+            document.querySelector('.slogan').textContent = data.slogan;
+            document.querySelector('.ibo-gift').textContent = data.iboGift;
+            document.querySelectorAll('.cta-text').forEach(el => el.textContent = data.ctaText);
+            document.querySelector('.view-plans-text').textContent = data.viewPlans;
+            document.querySelector('.banner-text').textContent = data.bannerText;
+            document.querySelector('.features-title').textContent = data.featuresTitle;
+            document.querySelector('.feature-1-title').textContent = data.feature1Title;
+            document.querySelector('.feature-1-desc').textContent = data.feature1Desc;
+            document.querySelector('.feature-2-title').textContent = data.feature2Title;
+            document.querySelector('.feature-2-desc').textContent = data.feature2Desc;
+            document.querySelector('.feature-3-title').textContent = data.feature3Title;
+            document.querySelector('.feature-3-desc').textContent = data.feature3Desc;
+            document.querySelector('.feature-4-title').textContent = data.feature4Title;
+            document.querySelector('.feature-4-desc').textContent = data.feature4Desc;
+            document.querySelector('.pricing-title').textContent = data.pricingTitle;
+            document.querySelector('.pricing-subtitle').textContent = data.pricingSubtitle;
+            document.querySelector('.plan-1-duration').textContent = data.plan1Duration;
+            document.querySelector('.plan-2-duration').textContent = data.plan2Duration;
+            document.querySelector('.plan-3-duration').textContent = data.plan3Duration;
+            document.querySelectorAll('.plan-feature-1').forEach(el => el.textContent = data.planFeature1);
+            document.querySelectorAll('.plan-feature-2').forEach(el => el.textContent = data.planFeature2);
+            document.querySelectorAll('.plan-feature-3').forEach(el => el.textContent = data.planFeature3);
+            document.querySelectorAll('.plan-feature-4').forEach(el => el.textContent = data.planFeature4);
+            document.querySelector('.bonus-text').textContent = data.bonusText;
+            document.querySelector('.ibo-free-text').textContent = data.iboFreeText;
+            document.querySelectorAll('.order-now-text').forEach(el => el.textContent = data.orderNow);
+            document.querySelector('.best-offer-badge').textContent = data.bestOffer;
+            document.querySelector('.free-ibo-badge').textContent = data.freeIbo;
+            document.querySelector('.promo-text').textContent = data.promoText;
+            document.querySelector('.testimonials-title').textContent = data.testimonialsTitle;
+            document.querySelector('.testimonial-1-text').textContent = data.testimonial1Text;
+            document.querySelector('.testimonial-1-name').textContent = data.testimonial1Name;
+            document.querySelector('.testimonial-2-text').textContent = data.testimonial2Text;
+            document.querySelector('.testimonial-2-name').textContent = data.testimonial2Name;
+            document.querySelector('.testimonial-3-text').textContent = data.testimonial3Text;
+            document.querySelector('.testimonial-3-name').textContent = data.testimonial3Name;
+            document.querySelector('.faq-title').textContent = data.faqTitle;
+            document.querySelector('.faq-1-title').textContent = data.faq1Title;
+            document.querySelector('.faq-1-answer').textContent = data.faq1Answer;
+            document.querySelector('.faq-2-title').textContent = data.faq2Title;
+            document.querySelector('.faq-2-answer').textContent = data.faq2Answer;
+            document.querySelector('.faq-3-title').textContent = data.faq3Title;
+            document.querySelector('.faq-3-answer').textContent = data.faq3Answer;
+            document.querySelector('.final-cta-title').textContent = data.finalCtaTitle;
+            document.querySelector('.final-cta-subtitle').textContent = data.finalCtaSubtitle;
+            document.querySelector('.instant-activation-text').textContent = data.instantActivation;
+            document.querySelector('.footer-slogan').textContent = data.footerSlogan;
+
+            // Update floating WhatsApp position
+            const floatingWa = document.querySelector('.floating-whatsapp');
+            if (lang === 'fr') {
+                floatingWa.style.right = 'auto';
+                floatingWa.style.left = '30px';
+            } else {
+                floatingWa.style.left = 'auto';
+                floatingWa.style.right = '30px';
+            }
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        // Create particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Scroll animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 100;
+                if (isVisible) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            handleScrollAnimations();
+            document.getElementById('btn-ar').classList.add('active');
+        });
+
+        window.addEventListener('scroll', handleScrollAnimations);
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
